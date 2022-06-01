@@ -26,43 +26,47 @@ public class AmazonSteps {
 
     @Then("Elijo el articulo que me interesa")
     public void chooseItem(){
-
+        amazon.eliegirArticulo();
     }
     
     @And("Agrego dicho articulo al carrito")
     public void addItem(){
-
+        amazon.agregarAlCarrito();
     }
 
     
-    @Then("Regreso a la pagina de resultados")
-    public void backToResults(){
-        
+    @Then("Regreso a la pagina anterior")
+    public void backToPreviousPage(){
+        amazon.regresarPaginaAnterior();
     }
     
 
     @Then("Busco el otro articulo")
     public void searchNextItem(){
-
+        amazon.clickOnSearch();
+        amazon.enterSearchCriteria("gaming keyboard");
+        amazon.clickItemSearch();
     }
 
     
     @When("Elijo el otro articulo que me interesa")
     public void chooseNextArticle(){
+        amazon.segundoArticuloElegir();
+        amazon.agregarAlCarrito();
 
     } 
 
 
     @And("Procedo al checkout")
     public void proceedCheckout(){
-
+        amazon.procederCheckout();
     }
 
 
 
     @Then("Flujo completado")
     public void completedTest(){
-
+        System.out.println ("FLUJO COMPLETADO");
 
     }
 

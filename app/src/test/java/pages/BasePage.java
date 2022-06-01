@@ -48,6 +48,10 @@ public class BasePage {
     
         }
 
+        public void findElement(String locator){
+        Find(locator);
+
+        }
 
 
 
