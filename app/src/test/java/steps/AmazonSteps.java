@@ -4,19 +4,22 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.AmazonPage;
 
 public class AmazonSteps {
 
+    AmazonPage amazon = new AmazonPage();
+
     @Given("Accedo a la pagina de Amazon")
     public void navigateToAmazon(){
-
-
-
+    amazon.navigateToAmazon();
+    
     }
 
     @When("Escribo el nombre del articulo en el campo de busqueda")
     public void searchItem(){
-
+        amazon.enterSearchCriteria("gaming headset");
+        amazon.clickItemSearch();
 
 
     }
@@ -60,7 +63,7 @@ public class AmazonSteps {
     @Then("Flujo completado")
     public void completedTest(){
 
-        
+
     }
 
 

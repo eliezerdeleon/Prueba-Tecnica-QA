@@ -2,8 +2,8 @@ package pages;
 
 public class AmazonPage extends BasePage {
 
-    private String searchButton = "";
-    private String searchTextField = "";
+    private String searchButton = "//input[@id='nav-search-submit-button']";
+    private String searchTextField = "//input[@id='twotabsearchtextbox']";
 
 
     public AmazonPage(){
@@ -18,12 +18,12 @@ public class AmazonPage extends BasePage {
     }
 
     public void clickItemSearch(){
-
+        clickElement(searchButton);
 
     }
 
-public void enterSearchCriteria(String criteria){
-    
+    public void enterSearchCriteria(String criteria){
+        write(searchTextField, criteria);
 
 }
 
