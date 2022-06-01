@@ -9,7 +9,7 @@ Scenario: Como usuario agrego articulos al carrito y procedo al checkout
     And Agrego dicho articulo al carrito
     Then Regreso a la pagina de resultados
     Then Busco el otro articulo
-    When Elijo el articulo que me interesa
+    When Elijo el otro articulo que me interesa
     Then Agrego dicho articulo al carrito
     And Procedo al checkout
     Then Flujo completado
