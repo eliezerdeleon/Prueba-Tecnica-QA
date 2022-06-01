@@ -13,46 +13,60 @@ public class AmazonSteps {
     @Given("Accedo a la pagina de Amazon")
     public void navigateToAmazon(){
     amazon.navigateToAmazon();
+    System.out.println ("ACCEDIENDO A AMAZON.COM");
     
     }
 
     @When("Escribo el nombre del articulo en el campo de busqueda")
     public void searchItem(){
-        amazon.enterSearchCriteria("gaming headset");
+        String criteriaGH = "gaming headset";
+        amazon.enterSearchCriteria(criteriaGH);
         amazon.clickItemSearch();
 
-
+        System.out.println ("BUSCANDO "+criteriaGH+" EN EL CAMPO DE BUSQUEDA");
     }
 
     @Then("Elijo el articulo que me interesa")
     public void chooseItem(){
         amazon.eliegirArticulo();
+
+        System.out.println ("ARTICULO ELEGIDO");
     }
     
     @And("Agrego dicho articulo al carrito")
     public void addItem(){
         amazon.agregarAlCarrito();
+
+        System.out.println ("AGREGADO AL CARRITO");
     }
 
     
     @Then("Regreso a la pagina anterior")
     public void backToPreviousPage(){
         amazon.regresarPaginaAnterior();
+
+        System.out.println ("REGRESANDO A PAGINA ANTERIOR");
     }
     
 
     @Then("Busco el otro articulo")
     public void searchNextItem(){
+        String criteriaGK = "gaming keyboard";
         amazon.clickOnSearch();
-        amazon.enterSearchCriteria("gaming keyboard");
+        amazon.enterSearchCriteria(criteriaGK);
         amazon.clickItemSearch();
+
+        System.out.println ("BUSCANDO OTRO ARTICULO");
+        System.out.println ("BUSCANDO "+criteriaGK+" EN EL CAMPO DE BUSQUEDA");
+
     }
 
     
     @When("Elijo el otro articulo que me interesa")
     public void chooseNextArticle(){
         amazon.segundoArticuloElegir();
-        amazon.agregarAlCarrito();
+        
+        System.out.println ("ARTICULO SELECCIONADO");
 
     } 
 
@@ -60,6 +74,9 @@ public class AmazonSteps {
     @And("Procedo al checkout")
     public void proceedCheckout(){
         amazon.procederCheckout();
+
+        System.out.println ("PROCEDIENDO AL CHECKOUT");
+        
     }
 
 

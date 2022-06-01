@@ -8,6 +8,7 @@ public class AmazonPage extends BasePage {
     private String addToCartButton = "//input[@id='add-to-cart-button']";
     private String cerrarSidebarCart = "//a[@id='attach-close_sideSheet-link']";
     private String segundoArticulo = "//span[contains(text(),'HyperX Alloy Elite 2 – Mechanical Gaming Keyboard,')]";
+    private String gotoCart = "//*[@id='sw-gtc']";
     private String checkOut = "//*[@id='sc-buy-box-ptc-button']/span/input";
     
     
@@ -59,6 +60,11 @@ public class AmazonPage extends BasePage {
 
         public void procederCheckout(){
             clickElement(checkOut);
+        }
+
+        public void goToCarttocheckout(){
+            findElement(gotoCart);
+            clickElement(gotoCart);
         }
 
 }
