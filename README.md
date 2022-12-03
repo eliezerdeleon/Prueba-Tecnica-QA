@@ -1,3 +1,6 @@
 # Prueba-Tecnica-QA
 
-Prueba tecnica, el branch principal donde estan todos los cambios validados incluyendo el video es MASTER
+This automation test proyect will open a google page and look for Eliezer De Leon and click on my youtube link result. 
+
+Main banch is master
+Testing changes branch will be review
